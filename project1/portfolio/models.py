@@ -49,7 +49,7 @@ class Trade(models.Model):
         ('FILLED', 'Filled'),
         ('PARTIALLY_FILLED', 'Partially Filled'),
         ('CANCELLED', 'Cancelled'),
-        {'REJECTED', 'Rejected'}
+        ('REJECTED', 'Rejected'),
     ]
     portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE, related_name='trades')
     stock = models.ForeignKey(Stock, on_delete=models.CASCADE, related_name='trades')
